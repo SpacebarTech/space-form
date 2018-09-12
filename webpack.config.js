@@ -3,11 +3,11 @@ const path = require( 'path' );
 // Add dependancies to exclode in externals.
 // Ex externals : { moment: 'moment' }
 module.exports = {
-  entry: path.resolve( __dirname, 'src/main.js' ),
+  entry: path.resolve( __dirname, 'src/main.vue' ),
   output: {
     filename: 'index.js',
 		path: path.resolve( __dirname, 'dist' ),
-		library: '[MODULE_NAME]',
+		library: 'SpaceForm',
 		libraryTarget: 'umd',
 		umdNamedDefine: true
   },
@@ -72,7 +72,6 @@ module.exports = {
     extensions: ['*', '.js', '.vue', '.json']
   },
   externals : {
-
   },
 	devtool: 'source-map',
 }

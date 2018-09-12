@@ -1,7 +1,7 @@
 {
-  "name": "@spacebartech/module-template",
+  "name": "@spacebartech/space-form",
   "version": "0.0.0-development",
-  "description": "[NAME OF MODULE]",
+  "description": "",
   "main": "dist/index.js",
   "files": [
     "dist/"
@@ -10,18 +10,19 @@
     "test": "mocha --require babel-core/register --colors ./test/test.js",
     "build": "webpack",
     "lint": "eslint ./src",
-    "travis-deploy-once": "travis-deploy-once --pro"
+    "travis-deploy-once": "travis-deploy-once --pro",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SpacebarTech/node-module-template.git"
+    "url": "https://github.com/SpacebarTech/space-form.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SpacebarTech/node-module-template/issues"
+    "url": "https://github.com/SpacebarTech/space-form/issues"
   },
-  "homepage": "https://github.com/SpacebarTech/node-module-template#readme",
+  "homepage": "https://github.com/SpacebarTech/space-form#readme",
   "devDependencies": {
     "@commitlint/cli": "^7.0.0",
     "@commitlint/config-conventional": "^7.0.1",
@@ -45,7 +46,7 @@
     "mocha": "^5.2.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^6.0.6",
-    "semantic-release": "^15.7.0",
+    "semantic-release": "^15.9.15",
     "semantic-release-cli": "^4.0.6",
     "travis-deploy-once": "^5.0.1",
     "vue-loader": "^13.0.5",
@@ -54,6 +55,7 @@
     "webpack-cli": "^3.0.8"
   },
   "dependencies": {
+    "@spacebartech/input-layout": "^1.0.3",
     "path": "^0.12.7",
     "pug": "^2.0.3",
     "vue": "^2.5.17"
@@ -76,7 +78,11 @@
     "analyzeCommits": {
       "preset": "angular",
       "releaseRules": [
-        {"type": "docs", "scope": "readme", "release": "patch"}
+        {
+          "type": "docs",
+          "scope": "readme",
+          "release": "patch"
+        }
       ]
     }
   },
